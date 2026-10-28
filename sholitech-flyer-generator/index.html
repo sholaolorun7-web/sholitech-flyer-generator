@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0754d9">
+  <meta name="description" content="Personalize your SholiteTech Creatives event attendance flyer.">
+  <title>I'll Be Present! — SholiteTech Creatives</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">ST</div>
+    <div class="brand-copy">
+      <strong>SholiteTech</strong>
+      <span>Creatives</span>
+    </div>
+    <div class="program">
+      <span class="program-title">Tech Program</span>
+      <span class="program-tagline">Skill <b>•</b> Learn <b>•</b> Grow</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">SHOLITETECH CREATIVES · LOKOJA</p>
+      <h1>I'll Be <span>Present!</span></h1>
+      <p>Personalize your event flyer and share your excitement.</p>
+      <div class="event-chip"><span>22 February 2028</span><i>•</i><span>11 AM</span></div>
+    </section>
+
+    <section class="workspace" aria-label="Flyer preview and personalization">
+      <div class="preview-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Live flyer preview</h2>
+            <p>Your changes appear here automatically.</p>
+          </div>
+          <span class="live-pill"><span></span> LIVE</span>
+        </div>
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="flyerCanvas" width="1229" height="1536"
+            aria-label="Personalized SholiteTech Creatives event flyer preview"></canvas>
+          <div class="canvas-hint" id="canvasHint">Upload a photo to personalize your flyer</div>
+        </div>
+        <p class="preview-note">Preview keeps the original flyer proportions.</p>
+      </div>
+
+      <aside class="editor-card">
+        <div class="editor-title">
+          <span class="editor-icon" aria-hidden="true">✦</span>
+          <div><h2>Personalize your flyer</h2><p>Make it yours in a few steps.</p></div>
+        </div>
+
+        <label class="field-label" for="fullName">Participant's full name</label>
+        <input id="fullName" type="text" maxlength="100" autocomplete="name"
+          placeholder="Enter your full name." aria-describedby="nameHelp">
+        <p class="field-help" id="nameHelp">Your name appears in the navy area beneath the attendance banner.</p>
+
+        <div class="field-label upload-label">Your photograph</div>
+        <label class="upload-box" for="photoInput" id="uploadBox">
+          <span class="upload-symbol" aria-hidden="true">↑</span>
+          <strong id="uploadTitle">Choose a photograph</strong>
+          <span id="uploadSub">JPG, JPEG, PNG or WebP · up to 15 MB</span>
+          <span class="upload-action" id="uploadAction">Browse files</span>
+        </label>
+        <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" hidden>
+        <p class="error-message" id="errorMessage" role="alert" hidden></p>
+
+        <div class="photo-controls" id="photoControls" hidden>
+          <div class="control-line">
+            <label class="field-label" for="zoomRange">Photo zoom</label>
+            <output id="zoomOutput" for="zoomRange">1.0×</output>
+          </div>
+          <input id="zoomRange" class="range" type="range" min="1" max="3" step="0.05" value="1">
+          <div class="range-labels"><span>Fit frame</span><span>Zoom in</span></div>
+          <p class="field-help">Drag the photo inside the preview to adjust its position.</p>
+          <button class="button button-secondary" id="resetPhoto" type="button">Reset photo position</button>
+        </div>
+
+        <button class="button button-primary" id="downloadBtn" type="button">
+          <span aria-hidden="true">↓</span> Download my flyer
+        </button>
+        <p class="download-help" id="downloadHelp">PNG image · original flyer dimensions</p>
+        <div class="privacy-note"><span aria-hidden="true">⌑</span><p><strong>Your photo stays private.</strong> Your photograph is processed locally on this device and is not uploaded to a server.</p></div>
+      </aside>
+    </section>
+    <footer class="site-footer">
+      <span class="footer-line"></span>
+      <p>TECH SKILLS FOR A BETTER TOMORROW</p>
+      <span class="footer-line"></span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
